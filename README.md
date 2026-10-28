@@ -80,7 +80,7 @@ Where:
 | $\gamma$ | Discount factor |
 | $V^\pi(s)$ | Value of state $s$ under policy $\pi$ |
 
----
+
 ## Algorithm
 
 1. Create the FrozenLake-v1 environment using Gymnasium.
@@ -94,10 +94,10 @@ Where:
 6. Repeat until the value function converges.
 7. Display the final value function as a 4 x 4 grid.
 
----
+
 
 ## Program
-
+```
 import gymnasium as gym
 import numpy as np
 
@@ -109,7 +109,6 @@ env = gym.make(
 
 env = env.unwrapped
 
-# Number of states and actions
 n_states = env.observation_space.n
 n_actions = env.action_space.n
 
@@ -163,12 +162,12 @@ for gamma in [0.9, 0.99]:
     print(np.round(V.reshape(4, 4), 4))
 
 env.close()
+```
 
 
 ## Output
 
 
-```text
 Name: Rakisha R.
 Register Number:212225230223
 
@@ -207,12 +206,11 @@ State-Value Function as 4x4 Grid:
 ​
 
 
-```
----
+
 
 ## Result
 
 Iterative policy evaluation was implemented successfully using the Gymnasium FrozenLake environment. The state-value function for the fixed random policy was estimated using the Bellman expectation equation.
 
----
+
 
